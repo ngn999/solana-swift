@@ -173,14 +173,14 @@ public struct BufferInfo<T: BufferLayout>: Decodable, Equatable {
     public let owner: String
     public let data: T
     public let executable: Bool
-    public let rentEpoch: UInt64
+    // public let rentEpoch: UInt64
 
-    public init(lamports: Lamports, owner: String, data: T, executable: Bool, rentEpoch: UInt64) {
+    public init(lamports: Lamports, owner: String, data: T, executable: Bool) {
         self.lamports = lamports
         self.owner = owner
         self.data = data
         self.executable = executable
-        self.rentEpoch = rentEpoch
+        // self.rentEpoch = rentEpoch
     }
 }
 
@@ -189,7 +189,7 @@ public struct BufferInfoParsed<T: Decodable>: Decodable {
     public let owner: String
     public let data: T?
     public let executable: Bool
-    public let rentEpoch: UInt64
+    // public let rentEpoch: UInt64
 }
 
 public struct PerformanceSample: Decodable {
