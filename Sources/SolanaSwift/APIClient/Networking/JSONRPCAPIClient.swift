@@ -23,7 +23,7 @@ public class JSONRPCAPIClient: SolanaAPIClient {
     ) async throws -> TransactionInfo? {
         try await get(
             method: "getTransaction",
-            params: [signature, RequestConfiguration(commitment: commitment, encoding: "jsonParsed")]
+            params: [signature, RequestConfiguration(commitment: commitment, encoding: "jsonParsed", maxSupportedTransactionVersion: 0)]
         )
     }
 
